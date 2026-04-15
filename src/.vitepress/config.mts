@@ -5,6 +5,10 @@ import headConfig from "./config/headConfig";
 // For use with loading Markdown plugins
 import themeConfig from "./config/themeConfig";
 
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   head: headConfig,
@@ -28,5 +32,12 @@ export default defineConfig({
   themeConfig,
   rewrites: {
     "en/:slug*": ":slug*",
+  },
+  vite: {
+    resolve: {
+      alias: {
+        "@comp": path.resolve(__dirname, "../components"),
+      },
+    },
   },
 });
