@@ -1,19 +1,26 @@
 import { defineConfig } from "vitepress";
 
+// Theme related config
+import headConfig from "./config/headConfig";
+// For use with loading Markdown plugins
+import themeConfig from "./config/themeConfig";
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  head: headConfig,
   title: "Celtrius' Documentation",
-  description: "Docs about anything and everything",
-  outDir: "./docs",
+  description: "Documentation about anything and everything",
+  srcDir: "./docs",
   locales: {
     root: {
       label: "English",
       lang: "en",
+      link: "/",
     },
-    de: {
+    fr: {
       label: "German",
       lang: "de", // optional, will be added  as `lang` attribute on `html` tag
-      link: "/de/guide", // default /fr/ -- shows on navbar translations menu, can be external
+      link: "/de", // default /fr/ -- shows on navbar translations menu, can be external
 
       // other locale specific properties...
     },
@@ -22,7 +29,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
-      { text: "Examples", link: "/markdown-examples" },
+      { text: "Videos", link: "/markdown-examples" },
     ],
 
     sidebar: [
@@ -35,6 +42,6 @@ export default defineConfig({
       },
     ],
 
-    socialLinks: [{ icon: "github", link: "https://github.com/vuejs/vitepress" }],
+    socialLinks: [{ icon: "github", link: "https://github.com/Celtrius/CeltriusDocs" }],
   },
 });
