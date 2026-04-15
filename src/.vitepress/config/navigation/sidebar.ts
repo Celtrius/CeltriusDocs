@@ -14,22 +14,25 @@ function defaultSidebarEN(): DefaultTheme.SidebarItem[] {
   return [
     {
       items: [
-        { text: "Docs", link: "/docs/" },
-        { text: "Videos", link: "/news/" },
-        { text: "Guides", link: "/guides/" },
+        {
+          text: "📚 Getting Started",
+          link: "/docs/",
+        },
+        { text: "🎥 Videos", link: "/videos/" },
+        { text: "📖 Guides", link: "/guides/" },
       ],
-    },
-    {
-      text: "Documentation",
-      items: [{ text: "Getting Started", link: "/docs/getting-started" }],
     },
     {
       text: "Video Tutorials",
       items: [
-        {
+        /*         {
           text: "Minecraft",
           collapsed: false,
-          items: [{ text: "Minecraft Server (2026)", link: "/videos/minecraft-server-2026/" }],
+          items: [{ text: "Minecraft Server (2026)", link: "/videos/minecraft-server-2026" }],
+        }, */
+        {
+          text: "Minecraft Server (2026)",
+          link: "/videos/minecraft-server-2026",
         },
       ],
     },

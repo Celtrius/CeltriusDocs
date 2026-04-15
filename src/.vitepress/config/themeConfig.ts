@@ -18,11 +18,6 @@ const themeConfig: DefaultTheme.Config = {
 
   socialLinks: [
     {
-      icon: "home",
-      link: "https://www.youtube.com/@Celtrii",
-      ariaLabel: "YouTube Channel",
-    },
-    {
       icon: "youtube",
       link: "https://www.youtube.com/@Celtrii",
       ariaLabel: "YouTube Channel",

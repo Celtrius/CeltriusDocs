@@ -1,4 +1,6 @@
 import { defineConfig } from "vitepress";
+import UnoCSS from "unocss/vite";
+import { presetAttributify, presetIcons, presetUno, transformerDirectives } from "unocss";
 
 // Theme related config
 import headConfig from "./config/headConfig";
@@ -33,11 +35,27 @@ export default defineConfig({
   rewrites: {
     "en/:slug*": ":slug*",
   },
+
   vite: {
     resolve: {
       alias: {
         "@comp": path.resolve(__dirname, "../components"),
       },
     },
+    plugins: [
+      UnoCSS({
+        presets: [
+          presetUno(),
+          presetIcons({
+            extraProperties: {
+              display: "inline-block",
+              "vertical-align": "middle",
+            },
+          }),
+          presetAttributify(),
+        ],
+        transformers: [transformerDirectives()],
+      }),
+    ],
   },
 });

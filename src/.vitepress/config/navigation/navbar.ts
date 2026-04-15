@@ -3,6 +3,10 @@ import type { DefaultTheme } from "vitepress";
 
 const nav: DefaultTheme.NavItem[] = [
   {
+    text: "✨ Main Website",
+    link: "https://celtrius.net",
+  },
+  {
     text: "📖 Docs",
     link: "/docs/",
     activeMatch: "/docs/",
