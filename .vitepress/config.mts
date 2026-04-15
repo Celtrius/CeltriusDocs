@@ -4,6 +4,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "Celtrius' Documentation",
   description: "Docs about anything and everything",
+  outDir: "./docs",
   locales: {
     root: {
       label: "English",
