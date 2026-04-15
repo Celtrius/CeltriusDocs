@@ -11,6 +11,7 @@ export default defineConfig({
   title: "Celtrius' Documentation",
   description: "Documentation about anything and everything",
   srcDir: "./docs",
+  outDir: "./dist",
   locales: {
     root: {
       label: "English",
