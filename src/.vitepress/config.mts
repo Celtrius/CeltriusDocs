@@ -10,15 +10,14 @@ export default defineConfig({
   head: headConfig,
   title: "Celtrius' Documentation",
   description: "Documentation about anything and everything",
-  srcDir: "./docs",
-  outDir: "./dist",
+  cleanUrls: true,
+  outDir: "../docs",
   locales: {
     root: {
       label: "English",
       lang: "en",
-      link: "/",
     },
-    fr: {
+    de: {
       label: "German",
       lang: "de", // optional, will be added  as `lang` attribute on `html` tag
       link: "/de", // default /fr/ -- shows on navbar translations menu, can be external
@@ -26,23 +25,8 @@ export default defineConfig({
       // other locale specific properties...
     },
   },
-  themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: "Home", link: "/" },
-      { text: "Videos", link: "/markdown-examples" },
-    ],
-
-    sidebar: [
-      {
-        text: "Examples",
-        items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
-        ],
-      },
-    ],
-
-    socialLinks: [{ icon: "github", link: "https://github.com/Celtrius/CeltriusDocs" }],
+  themeConfig,
+  rewrites: {
+    "en/:slug*": ":slug*",
   },
 });

@@ -1,0 +1,62 @@
+// src/.vitepress/config/navigation/sidebar.ts
+import type { DefaultTheme } from "vitepress";
+
+const sidebar: DefaultTheme.SidebarMulti = {
+  "/docs/": defaultSidebarEN(),
+  "/videos/": defaultSidebarEN(),
+  "/changelogs/": defaultSidebarEN(),
+  "/de/docs/": defaultSidebarDE(),
+  "/de/videos/": defaultSidebarDE(),
+  "/de/changelogs/": defaultSidebarDE(),
+};
+
+function defaultSidebarEN(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      items: [
+        { text: "Docs", link: "/docs/" },
+        { text: "Videos", link: "/news/" },
+        { text: "Guides", link: "/guides/" },
+      ],
+    },
+    {
+      text: "Documentation",
+      items: [{ text: "Getting Started", link: "/docs/getting-started" }],
+    },
+    {
+      text: "Video Tutorials",
+      items: [
+        {
+          text: "Minecraft",
+          collapsed: false,
+          items: [{ text: "Minecraft Server (2026)", link: "/videos/minecraft-server-2026/" }],
+        },
+      ],
+    },
+  ];
+}
+
+function defaultSidebarDE(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      items: [
+        { text: "Docs", link: "/docs/" },
+        { text: "News", link: "/news/" },
+        { text: "Changelogs", link: "/changelogs/" },
+      ],
+    },
+    {
+      text: "Documentation",
+      items: [{ text: "Getting Started", link: "/docs/getting-started" }],
+    },
+    {
+      text: "News",
+      items: [
+        { text: "Latest News", link: "/news/" },
+        { text: "First Post", link: "/news/first-post" },
+      ],
+    },
+  ];
+}
+
+export default sidebar;

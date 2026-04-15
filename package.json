@@ -3,9 +3,9 @@
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview",
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "src:dev": "vitepress dev src",
+    "src:build": "vitepress build src",
+    "src:preview": "vitepress preview src"
   },
   "dependencies": {
     "vitepress": "^1.6.4"

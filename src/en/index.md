@@ -4,8 +4,7 @@ layout: home
 
 hero:
   name: "Celtrius' Documentation"
-  text: "Docs about anything and everything"
-  tagline: My great project tagline
+  tagline: Docs about anything and everything
   actions:
     - theme: brand
       text: Markdown Examples
