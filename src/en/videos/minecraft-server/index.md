@@ -653,3 +653,24 @@ Well then you've certainly come to the right place! 🌟
 Assuming that you want create your own modpack, meaning you want to personally pick the mods you install, you will need to choose a mod loader. If you want to play an existing modpack instead, then please follow the modpack specific server guide. These usually already come with very detailed instructions.
 
 In {{year}} I would only really recommend one of these 3:
+
+<div style="display:flex; gap:16px;">
+  <img src="./assets/forge.webp" class="no-viewer" style="width:33%;">
+  <img src="./assets/NeoForge.webp" class="no-viewer" style="width:33%;">
+  <img src="./assets/fabric.webp" class="no-viewer" style="width:33%; ">
+</div>
+
+None of these are particularly better then the other. It really comes down to what mods you want to play and which version of Minecraft.
+Personally I would recommend that you take a look at the mods you are interested in and then note down which mod loader they are supported on.<br>
+If you don't have a set of mods just yet and want to keep going anyway, here's a recommendation table:
+
+| Minecraft Version        | Recommended Mod Loader <br> (From left to right) |
+| ------------------------ | ------------------------------------------------ |
+| 1.1 - 1.16.5             | **Forge**                                        |
+| 1.17 - 1.20.1            | **Fabric**, Forge                                |
+| 1.20.2 - 26.\* and newer | **Fabric**, NeoForge, Forge                      |
+
+::: info
+**The general rule of thumb:** <br>
+If you are playing a `newer version` of Minecraft there will be more mods supporting `Fabric and NeoForge`. If you are playing older versions, mods will be more forge biased.
+:::
