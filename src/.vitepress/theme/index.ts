@@ -5,6 +5,8 @@ import DefaultTheme from "vitepress/theme";
 import "./style.css";
 import "virtual:uno.css";
 import "vitepress-plugin-folder-tree/style.css";
+import ImageViewerP from "@davidingplus/vitepress-image-viewer";
+import "@davidingplus/vitepress-image-viewer/style.css";
 
 export default {
   extends: DefaultTheme,
@@ -14,6 +16,6 @@ export default {
     });
   },
   enhanceApp({ app, router, siteData }) {
-    // ...
+    ImageViewerP(app);
   },
 } satisfies Theme;

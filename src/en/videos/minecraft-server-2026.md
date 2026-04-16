@@ -69,7 +69,7 @@ tree:
 
 ### Choosing the correct Java Version {#java}
 
-Minecraft is a pretty old game at this point and to keep the code safe and up to modern standards Mojang updated they Java version of the game every few updates. When want to run a minecraft server we need to have the java version installed on our computer that our server was originally developed with.
+Minecraft is a pretty old game at this point and to keep the code safe and up to modern standards Mojang updated they Java version of the game every few updates. When we want to run a minecraft server we need to have the java version installed on our computer that our server was originally developed with.
 
 | Minecraft Version |    Java | Download                                                          |
 | ----------------- | ------: | ----------------------------------------------------------------- |
@@ -82,7 +82,7 @@ Minecraft is a pretty old game at this point and to keep the code safe and up to
 \*only JDK available
 
 When you have decided on which Minecraft Version your server will run, click the download link next to the corresponding Java version. This will redirect you to download page for Eclipse Temurin.
-When going through the installer make sure to
+When going through the installer make sure to select "install feature on disk" when asked if you want to change the JAVA_HOME variable.
 
 ::: info
 Temurin is a free, open-source distribution of the Java Development Kit (JDK) built from OpenJDK and maintained by the Eclipse Adoptium project.
@@ -151,7 +151,7 @@ java -Xms10G -Xmx10G ^
 pause
 ```
 
-In the end your folder should only contain a valid batch file:
+In the end make sure the .bat file is placed in your folder like this
 
 ```tree
 options:
@@ -161,8 +161,15 @@ tree:
   description: "This the "
   children:
       - start.bat
+      - serverfile (e.g. server.jar)
+      - ...
 
 ```
+
+::: warning
+Please double check that in the end of the batch file the "server.jar" part is matching the name of your server file.
+
+:::
 
 ## Vanilla Server {#vanilla}
 
@@ -172,25 +179,53 @@ tree:
 
 This section is meant to explain how to create a basic minecraft vanilla server. This means we will run an unmodified game server which does not support plugins or mods. If you want to create an SMP server for your friends I would recommend taking a look at the [Paper Section](#paper) instead.
 
-Before continuing make sure to create a folder for your server as explained in the [folder creation](#folder) section and creating a [valid batch file](#batch)
+Before continuing make sure to create a folder for your server as explained in the [folder creation](#folder) section and create a [valid batch file](#batch)
 
-### Download the Server file
+---
 
-In order to download the server file for a vanilla server you need to open your Minecraft Launcher. Make sure you have "Java Edition" selected and then click on the "Installations" tab
+### Download the Server file{#vanilla-server}
 
-![An image](./1.webp)
+In order to download the server file for a vanilla server you need to open your Minecraft Launcher. Make sure you have "Java Edition" selected and then click on the "Installations" tab. The next step is to click the "New Installation" button.
 
-![An image](./2.webp)
+<div style="display:flex; flex-direction:row; gap:16px; align-items:flex-start;">
 
-<div style="display:flex; gap:16px; align-items:top;">
-<div>
+  <img src="./1.webp" style="width:50%;" alt="Select Java Edition on the right and then click on Installations"/>
 
-## Minecraft Server
+  <img src="./2.webp" style="width:50%;" alt="Click the New Installation button"/>
 
-This guide shows how to create a server batch file and configure RAM.
+</div>
+<br/>
+
+<div style="display:flex; flex-direction:row; gap:16px; align-items:flex-start;">
+
+  <div style="width:70%;">
+Once you click the "New Installation" button, select the minecraft version you want your server running on.<br><br>
+After that click the little "Server" text. This will download the official vanilla server for that version from official Mojang Servers.
+ </div>
+
+  <img src="./3.webp" style="width:30%;" alt="Select your version from the dropdown and the click the server text"/>
 
 </div>
 
-![An image](./1.webp)
+::: info
+If not done already, check which Java Version you need for that Minecraft Version with the [table](#java) above.
+Make sure that when you open a terminal and enter the command `java -version` that it reports this back to you for confirmation.
+:::
 
-</div>
+---
+
+### Move the server.jar file to your servers' folder
+
+If you followed the folder creation, batch file creation and the upper server.jar instructions correctly, your folder should now look like this:
+
+```tree
+options:
+  showToolbar: false
+tree:
+- name: "Vanilla Server"
+  description: "Or however you want to call your server"
+  children:
+      - start.bat
+      - server.jar
+
+```
