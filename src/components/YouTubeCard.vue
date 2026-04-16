@@ -9,7 +9,7 @@ defineProps<{
 
 <template>
   <a class="yt-card" :href="href" target="_blank" rel="noreferrer">
-    <img v-if="thumbnail" class="yt-card__thumb" :src="thumbnail" :alt="title" />
+    <img v-if="thumbnail" class="yt-card__thumb no-viewer" :src="thumbnail" :alt="title" />
 
     <div class="yt-card__content">
       <div class="yt-card__label">Video</div>

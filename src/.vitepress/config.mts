@@ -37,6 +37,12 @@ export default withFolderTree(
     rewrites: {
       "en/:slug*": ":slug*",
     },
+    markdown: {
+      image: {
+        // image lazy loading is disabled by default
+        lazyLoading: true,
+      },
+    },
 
     vite: {
       resolve: {

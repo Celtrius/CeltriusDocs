@@ -47,7 +47,7 @@ const themeConfig: DefaultTheme.Config = {
   },
 
   editLink: {
-    pattern: "https://github.com/mihonapp/website/edit/main/website/src/:path",
+    pattern: "https://github.com/Celtrius/CeltriusDocs/edit/main/src/:path",
     text: "Help me improve this page",
   },
 

@@ -23,16 +23,15 @@ function defaultSidebarEN(): DefaultTheme.SidebarItem[] {
       ],
     },
     {
-      text: "Video Tutorials",
+      text: "Video Guides",
       items: [
-        /*         {
-          text: "Minecraft",
-          collapsed: false,
-          items: [{ text: "Minecraft Server (2026)", link: "/videos/minecraft-server-2026" }],
-        }, */
         {
-          text: "Minecraft Server (2026)",
-          link: "/videos/minecraft-server-2026",
+          text: "🎮 Minecraft Server (2026)",
+          link: "/videos/minecraft-server/",
+          items: [
+            { text: "Portforwarding", link: "/videos/minecraft-server/portforwarding" },
+            { text: "Via Version", link: "/videos/minecraft-server/viaversion" },
+          ],
         },
       ],
     },

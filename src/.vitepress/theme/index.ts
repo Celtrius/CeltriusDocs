@@ -5,8 +5,8 @@ import DefaultTheme from "vitepress/theme";
 import "./style.css";
 import "virtual:uno.css";
 import "vitepress-plugin-folder-tree/style.css";
-import ImageViewerP from "@davidingplus/vitepress-image-viewer";
-import "@davidingplus/vitepress-image-viewer/style.css";
+import ImageViewerP from "@miletorix/vitepress-image-viewer"; //[!code ++]
+import "@miletorix/vitepress-image-viewer/style.css"; //[!code ++]
 
 export default {
   extends: DefaultTheme,
