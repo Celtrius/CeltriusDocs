@@ -18,6 +18,11 @@ const themeConfig: DefaultTheme.Config = {
 
   socialLinks: [
     {
+      icon: "patreon",
+      link: "https://patreon.com/Celtrius",
+      ariaLabel: "YouTube Channel",
+    },
+    {
       icon: "youtube",
       link: "https://www.youtube.com/@Celtrii",
       ariaLabel: "YouTube Channel",

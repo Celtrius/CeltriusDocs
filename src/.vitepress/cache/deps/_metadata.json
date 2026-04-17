@@ -1,31 +1,37 @@
 {
-  "hash": "e7206d32",
+  "hash": "4309fb1e",
   "configHash": "645b57b6",
-  "lockfileHash": "0a5af5c6",
-  "browserHash": "764d418f",
+  "lockfileHash": "7a7c1f65",
+  "browserHash": "0adf33e9",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/.pnpm/vue@3.5.32/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "d3715e62",
+      "fileHash": "3415be35",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/.pnpm/@vue+devtools-api@7.7.9/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "7ba83f54",
+      "fileHash": "98a0b97c",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/.pnpm/@vueuse+core@12.8.2/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "9037351c",
+      "fileHash": "19575204",
       "needsInterop": false
     },
     "@miletorix/vitepress-image-viewer": {
       "src": "../../../../node_modules/.pnpm/@miletorix+vitepress-image-viewer@1.3.2_vue@3.5.32/node_modules/@miletorix/vitepress-image-viewer/dist/image-viewer.es.js",
       "file": "@miletorix_vitepress-image-viewer.js",
-      "fileHash": "d6b0d902",
+      "fileHash": "d2e5410f",
+      "needsInterop": false
+    },
+    "@royalfig/share-button": {
+      "src": "../../../../node_modules/.pnpm/@royalfig+share-button@1.0.26/node_modules/@royalfig/share-button/dist/share-button.es.js",
+      "file": "@royalfig_share-button.js",
+      "fileHash": "86c242ab",
       "needsInterop": false
     }
   },

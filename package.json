@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@miletorix/vitepress-image-viewer": "^1.3.2",
+    "@royalfig/share-button": "^1.0.26",
     "vitepress": "^1.6.4",
     "vitepress-plugin-folder-tree": "^1.2.1",
     "vue": "^3.5.32"

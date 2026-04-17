@@ -11,6 +11,7 @@ label: "Contents"
 <script setup lang="ts">
 import YouTubeCard from "@comp/YoutubeCard.vue"
 import MinecraftBatGenerator from "@comp/MinecraftBatGenerator.vue"
+import "@royalfig/share-button";
 const year = new Date().getFullYear()
 </script>
 
@@ -654,10 +655,29 @@ Assuming that you want create your own modpack, meaning you want to personally p
 
 In {{year}} I would only really recommend one of these 3:
 
-<div style="display:flex; gap:16px;">
-  <img src="./assets/forge.webp" class="no-viewer" style="width:33%;">
-  <img src="./assets/NeoForge.webp" class="no-viewer" style="width:33%;">
-  <img src="./assets/fabric.webp" class="no-viewer" style="width:33%; ">
+<div style="display:flex; gap:16px; width:98%;">
+
+  <a href="https://files.minecraftforge.net/net/minecraftforge/forge/" style="width:33%; " target="_blank" rel="noopener">
+  <img
+    src="./assets/forge.webp"
+    alt="Example"
+    class="no-viewer"
+  />
+</a>
+  <a href="https://neoforged.net/" style="width:33%; " target="_blank" rel="noopener">
+  <img
+    src="./assets/NeoForge.webp"
+    alt="Example"
+    class="no-viewer"
+  />
+</a>
+  <a href="https://fabricmc.net/" style="width:33%; " target="_blank" rel="noopener">
+  <img
+    src="./assets/fabric.webp"
+    alt="Example"
+    class="no-viewer"
+  />
+</a>
 </div>
 
 None of these are particularly better then the other. It really comes down to what mods you want to play and which version of Minecraft.
