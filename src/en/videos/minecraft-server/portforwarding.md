@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import "@royalfig/share-button";
-</script>
-
 # Portforwarding
 
 ## What is portforwarding?
@@ -57,7 +53,12 @@ You can also try just typing `admin` for either password or username (if there i
 
 Before continuing we need to find out the local IP address for the computer the server will be running on.
 In Windows open the terminal and enter the command `ipconfig` and press enter.
-Look for your WIFIs / LANs internet adapter and then for `IPv4-Address  . . . . . . . . . . : <IP>`
+Look for your WIFIs / LANs internet adapter and then for:
+
+```log
+IPv4-Address  . . . . . . . . . . : <IP>
+```
+
 Note down that IP somewhere, we will need it later.
 
 ### Opening the port
@@ -86,7 +87,6 @@ You can find out if it worked correctly by starting a Minecraft server and then 
 If you did everything correctly it should say that your port is open!
 
 If this guide was helpful to you, please share it with your friends!
-<share-button dark-mode="false"></share-button>
 
 If you want to further support me:
 [YouTube](https://youtube.com/@celtrii) [Patreon](https://patreon.com/Celtrius)

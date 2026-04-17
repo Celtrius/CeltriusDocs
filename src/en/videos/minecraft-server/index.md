@@ -11,7 +11,6 @@ label: "Contents"
 <script setup lang="ts">
 import YouTubeCard from "@comp/YoutubeCard.vue"
 import MinecraftBatGenerator from "@comp/MinecraftBatGenerator.vue"
-import "@royalfig/share-button";
 const year = new Date().getFullYear()
 </script>
 
