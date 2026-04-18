@@ -35,7 +35,7 @@ const headConfig: HeadConfig[] = [
     gtag('js', new Date());
     gtag('config', 'G-Q33CD0SG70');`,
   ],
-  ["meta", { property: "algolia-site-verification", content: "9CD3C4AC3F5E81CC" }],
+  ["meta", { name: "algolia-site-verification", content: "9CD3C4AC3F5E81CC" }],
 ];
 
 export default headConfig;
