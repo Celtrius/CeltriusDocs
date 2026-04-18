@@ -25,7 +25,7 @@ const headConfig: HeadConfig[] = [
   ],
   ["meta", { property: "og:locale", content: "en_US" }],
   ["meta", { property: "og:type", content: "website" }],
-  // Google Analytics
+  // Google Analytics + Algolia
   ["script", { async: "", src: "https://www.googletagmanager.com/gtag/js?id=G-Q33CD0SG70" }],
   [
     "script",
@@ -35,6 +35,7 @@ const headConfig: HeadConfig[] = [
     gtag('js', new Date());
     gtag('config', 'G-Q33CD0SG70');`,
   ],
+  ["meta", { property: "algolia-site-verification", content: "9CD3C4AC3F5E81CC" }],
 ];
 
 export default headConfig;
