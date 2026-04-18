@@ -7,6 +7,7 @@ import "virtual:uno.css";
 import "vitepress-plugin-folder-tree/style.css";
 import ImageViewerP from "@miletorix/vitepress-image-viewer"; //[!code ++]
 import "@miletorix/vitepress-image-viewer/style.css"; //[!code ++]
+import type { EnhanceAppContext } from "vitepress";
 
 export default {
   extends: DefaultTheme,
@@ -15,7 +16,7 @@ export default {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
     });
   },
-  async enhanceApp({ app, router, siteData }) {
+  enhanceApp({ app, router, siteData }) {
     ImageViewerP(app);
   },
 } satisfies Theme;

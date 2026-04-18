@@ -25,6 +25,16 @@ const headConfig: HeadConfig[] = [
   ],
   ["meta", { property: "og:locale", content: "en_US" }],
   ["meta", { property: "og:type", content: "website" }],
+  // Google Analytics
+  ["script", { async: "", src: "https://www.googletagmanager.com/gtag/js?id=G-Q33CD0SG70" }],
+  [
+    "script",
+    {},
+    `window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q33CD0SG70');`,
+  ],
 ];
 
 export default headConfig;
