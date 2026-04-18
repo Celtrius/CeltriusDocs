@@ -1,5 +1,6 @@
 ---
-title: How to create a Minecraft Server (2026)
+title: How to Create a Minecraft Server (2026)
+description: Step-by-step guide to creating any Minecraft server
 titleTemplate: Vite & Vue powered static site generator
 layout: doc
 
@@ -14,7 +15,7 @@ import MinecraftBatGenerator from "@comp/MinecraftBatGenerator.vue"
 const year = new Date().getFullYear()
 </script>
 
-# Minecraft Server Tutorial (2026)
+# How to Create a Minecraft Server (2026)<br> — Step-by-Step Guide
 
 <YouTubeCard
   title="How to create a Minecraft Server (2026)"
@@ -648,7 +649,7 @@ Well then you've certainly come to the right place! 🌟
 
 ---
 
-### Choosing a Mod Loader
+### Choosing a Mod Loader {#modloader}
 
 Assuming that you want create your own modpack, meaning you want to personally pick the mods you install, you will need to choose a mod loader. If you want to play an existing modpack instead, then please follow the modpack specific server guide. These usually already come with very detailed instructions.
 
@@ -659,21 +660,21 @@ In {{year}} I would only really recommend one of these 3:
   <a href="https://files.minecraftforge.net/net/minecraftforge/forge/" style="width:33%; " target="_blank" rel="noopener">
   <img
     src="./assets/forge.webp"
-    alt="Example"
+    alt="Forge Logo"
     class="no-viewer"
   />
 </a>
   <a href="https://neoforged.net/" style="width:33%; " target="_blank" rel="noopener">
   <img
     src="./assets/NeoForge.webp"
-    alt="Example"
+    alt="NeoForge Logo"
     class="no-viewer"
   />
 </a>
   <a href="https://fabricmc.net/" style="width:33%; " target="_blank" rel="noopener">
   <img
     src="./assets/fabric.webp"
-    alt="Example"
+    alt="Fabric Logo"
     class="no-viewer"
   />
 </a>
@@ -693,3 +694,52 @@ If you don't have a set of mods just yet and want to keep going anyway, here's a
 **The general rule of thumb:** <br>
 If you are playing a `newer version` of Minecraft there will be more mods supporting `Fabric and NeoForge`. If you are playing older versions, mods will be more forge biased.
 :::
+
+---
+
+### Server Folder Setup
+
+Similar to all the other servers in this this guide you will want to create a new folder for this one.
+
+```tree
+options:
+  showToolbar: false
+tree:
+- name: "Modded Server"
+  children:
+      - server.jar
+      - start.bat
+```
+
+---
+
+### Download the server file
+
+Depending on which mod loader you choose you will have to follow different instructions for downloading the server file. Below you will find 3 sections for the different modloaders. Jump to the one important for you with these links:
+
+---
+
+#### Forge Server {#forge-server}
+
+Visit the official forge website and select a Minecraft version in the left sidebar.
+Then download the server installer by clicking on "Installer" in the "Download Recommended" section. If you need a specific forge version you can click on the "Show all Versions" button. Please keep in mind that this is talking about different forge versions for the same Minecraft version.
+
+Wait for for 5 seconds while ignoring the ads and then click the "Skip" button at the top right.
+
+Open the downloaded installer `.jar` file.
+
+<div style="display:flex; width:98%; flex-direction:row; gap:16px; align-items:flex-start;">
+
+  <div style="width:70%;">
+
+Once you open the installer make sure to select "Install server"
+
+After that select the path of your Minecraft server down below.
+
+ </div>
+
+  <img src="./assets/15.webp" style="width:30%;" alt="Forge Server installer"/>
+
+</div>
+
+Please remember the forge version your server is running on because when you want to join with a client, that one needs to be running on the same forge version. That means either select the correct version in your preferred Minecraft Launcher or after installing the server, reopen the installer above and select "Install client" as well as your `.minecraft` path instead.

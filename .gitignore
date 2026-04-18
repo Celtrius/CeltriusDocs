@@ -39,5 +39,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+*.af
+*.af~lock~
 
 _pagefind/

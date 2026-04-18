@@ -17,8 +17,9 @@ export default withFolderTree(
   defineConfig({
     head: headConfig,
     title: "Celtrius' Documentation",
-    description: "Documentation about anything and everything",
+    description: "Docs & Guides about anything and everything",
     cleanUrls: true,
+    lastUpdated: true,
     outDir: "../docs",
     locales: {
       root: {
@@ -36,6 +37,9 @@ export default withFolderTree(
     themeConfig,
     rewrites: {
       "en/:slug*": ":slug*",
+    },
+    sitemap: {
+      hostname: "https://docs.celtrius.net",
     },
     markdown: {
       image: {

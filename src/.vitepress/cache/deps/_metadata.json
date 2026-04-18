@@ -1,0 +1,37 @@
+{
+  "hash": "06586597",
+  "configHash": "30864fcf",
+  "lockfileHash": "52afc5c1",
+  "browserHash": "d5871e27",
+  "optimized": {
+    "vue": {
+      "src": "../../../../node_modules/.pnpm/vue@3.5.32/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "55869d26",
+      "needsInterop": false
+    },
+    "vitepress > @vue/devtools-api": {
+      "src": "../../../../node_modules/.pnpm/@vue+devtools-api@7.7.9/node_modules/@vue/devtools-api/dist/index.js",
+      "file": "vitepress___@vue_devtools-api.js",
+      "fileHash": "1f0d3f3b",
+      "needsInterop": false
+    },
+    "vitepress > @vueuse/core": {
+      "src": "../../../../node_modules/.pnpm/@vueuse+core@12.8.2/node_modules/@vueuse/core/index.mjs",
+      "file": "vitepress___@vueuse_core.js",
+      "fileHash": "4eb3e8f7",
+      "needsInterop": false
+    },
+    "@miletorix/vitepress-image-viewer": {
+      "src": "../../../../node_modules/.pnpm/@miletorix+vitepress-image-viewer@1.3.2_vue@3.5.32/node_modules/@miletorix/vitepress-image-viewer/dist/image-viewer.es.js",
+      "file": "@miletorix_vitepress-image-viewer.js",
+      "fileHash": "a029efce",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-2NCXJYS6": {
+      "file": "chunk-2NCXJYS6.js"
+    }
+  }
+}

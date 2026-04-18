@@ -20,7 +20,7 @@ const headConfig: HeadConfig[] = [
     "meta",
     {
       property: "og:description",
-      content: "Celtrius' Documentation – Docs about anything and everything",
+      content: "Celtrius' Documentation – Docs & Guides about anything and everything",
     },
   ],
   ["meta", { property: "og:locale", content: "en_US" }],
