@@ -68,9 +68,77 @@ const themeConfig: DefaultTheme.Config = {
   search: {
     provider: "algolia",
     options: {
-      appId: "IXX45N1P5C",
-      apiKey: "a7a819b0bd88bc7333c7f42d611ec04e",
-      indexName: "mihon",
+      appId: "AVBQ81CSFI",
+      apiKey: "205c4c30185a5a76798bbec8262791b5",
+      indexName: "Celtrius Docs",
+
+      locales: {
+        de: {
+          placeholder: "Docs & Guides durchsuchen...",
+          translations: {
+            button: {
+              buttonText: "Suchen",
+              buttonAriaLabel: "suchen",
+            },
+            modal: {
+              searchBox: {
+                clearButtonTitle: "clearButtonTitle",
+                clearButtonAriaLabel: "clearButtonAriaLabel",
+                closeButtonText: "closeButtonText",
+
+                searchInputLabel: "Suche",
+                placeholderTextAskAi: "placeholderTextAskAi",
+
+                placeholderTextAskAiStreaming: "placeholderTextAskAiStreaming",
+                backToKeywordSearchButtonText: "backToKeywordSearchButtonText",
+                newConversationPlaceholder: "newConversationPlaceholder",
+                conversationHistoryTitle: "conversationHistoryTitle",
+                startNewConversationText: "startNewConversationText",
+                viewConversationHistoryText: "viewConversationHistoryText",
+                threadDepthErrorPlaceholder: "Thread Depth Fehler",
+              },
+              newConversation: {
+                newConversationTitle: "newConversationTitle",
+                newConversationDescription: "newConversationDescription",
+              },
+              footer: {
+                selectText: "auszuwählen",
+                navigateText: "navigieren",
+                closeText: "schließen",
+                backToSearchText: "Zurück zur Suche",
+                searchByText: "Suche mit",
+              },
+              errorScreen: {
+                titleText: "titleText",
+                helpText: "helpText",
+              },
+              startScreen: {
+                recentSearchesTitle: "Zuletzt gesucht",
+                noRecentSearchesText: "Keine vergangenen Suchanfragen.",
+                saveRecentSearchButtonTitle: "Zu Favouriten hinzufügen",
+                removeRecentSearchButtonTitle: "Aus Suchverlauf löschen",
+                favoriteSearchesTitle: "Gespeicherte Suchanfragen",
+                removeFavoriteSearchButtonTitle: "Aus Favourite entfernen",
+                recentConversationsTitle: "recentConversationsTitle",
+                removeRecentConversationButtonTitle: "removeRecentConversationButtonTitle",
+              },
+              noResultsScreen: {
+                noResultsText: "Keine Ergebnisse für: ",
+                suggestedQueryText: "Versuch's mal mit",
+                reportMissingResultsText: "reportMissingResultsText",
+                reportMissingResultsLinkText: "reportMissingResultsLinkText",
+              },
+              resultsScreen: {
+                askAiPlaceholder: "askAiPlaceholder AI：",
+                noResultsAskAiPlaceholder: "noResultsAskAiPlaceholder",
+              },
+            },
+          },
+        },
+        root: {
+          placeholder: "Search docs & guides...",
+        },
+      },
     },
   },
 };

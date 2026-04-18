@@ -1,7 +1,7 @@
 ---
 title: How to Create a Minecraft Server (2026)
 description: Step-by-step guide to creating any Minecraft server
-titleTemplate: Vite & Vue powered static site generator
+titleTemplate: Celtrius' Guides
 layout: doc
 
 outline: [2, 3, 4]
@@ -719,21 +719,18 @@ Depending on which mod loader you choose you will have to follow different instr
 
 ---
 
-#### Forge Server {#forge-server}
+#### ✨ Forge Server {#forge-server}
 
-Visit the official forge website and select a Minecraft version in the left sidebar.
+Visit the official [forge website](https://files.minecraftforge.net/net/minecraftforge/forge/) and select a Minecraft version in the left sidebar.
 Then download the server installer by clicking on "Installer" in the "Download Recommended" section. If you need a specific forge version you can click on the "Show all Versions" button. Please keep in mind that this is talking about different forge versions for the same Minecraft version.
 
-Wait for for 5 seconds while ignoring the ads and then click the "Skip" button at the top right.
-
-Open the downloaded installer `.jar` file.
+Wait for for 5 seconds while ignoring the ads and then click the "Skip" button at the top right. Open the downloaded installer `.jar` file.
 
 <div style="display:flex; width:98%; flex-direction:row; gap:16px; align-items:flex-start;">
 
   <div style="width:70%;">
 
 Once you open the installer make sure to select "Install server"
-
 After that select the path of your Minecraft server down below.
 
  </div>
@@ -743,3 +740,136 @@ After that select the path of your Minecraft server down below.
 </div>
 
 Please remember the forge version your server is running on because when you want to join with a client, that one needs to be running on the same forge version. That means either select the correct version in your preferred Minecraft Launcher or after installing the server, reopen the installer above and select "Install client" as well as your `.minecraft` path instead.
+
+---
+
+#### ✨ Fabric Server {#fabric-server}
+
+Downloading the fabric server file is pretty much as simple as vanilla.
+Go to the official [fabric server](https://fabricmc.net/use/server/) page. Here you can select your Minecraft version and if you need even a specific fabric version. After clicking the blue button you are already done. You can move that downloaded `.jar` file into your Minecraft server folder.
+
+---
+
+#### ✨ NeoForge Server {#neoforge-server}
+
+This one is pretty similar to the Forge Server. First you need to head to the official [NeoForge Website](https://neoforged.net/) and download the installer by selecting your Minecraft version and then clicking the big orange button.
+
+<div style="display:flex; width:98%; flex-direction:row; gap:16px; align-items:flex-start;">
+
+  <div style="width:70%;">
+
+Select `Install Server` and select the `path to your Minecraft server folder` below.
+
+ </div>
+
+  <img src="./assets/16.webp" style="width:30%;" alt="Forge Server installer"/>
+
+</div>
+
+---
+
+### Preparing the Server folder
+
+Make sure that you followed the steps above correctly.
+If you choose the Fabric server or an older Forge / NeoForge Version where the installer does not provide you with a `.bat` file, please follow the [instructions](#batch) for creating your own batch file.
+
+If done correctly you folder should looks like one of these 3
+
+<div style="display:flex; gap:16px; width:98%;">
+
+  <div style="width:50%; " target="_blank" rel="noopener">
+
+[Forge](#forge-server) (with provided `.bat` file)
+
+```tree
+options:
+  showToolbar: false
+tree:
+- name: "Forge Server"
+  children:
+      - name: libraries
+        open: false
+        locked: true
+        type: folder
+      - forge-<version>.jar
+      - README.txt
+      - run.bat
+      - run.sh
+      - user_jvm_args.txt
+```
+
+</div>
+  <div style="width:50%; " target="_blank" rel="noopener">
+
+[Fabric](#fabric-server)
+
+```tree
+options:
+  showToolbar: false
+tree:
+- name: "Fabric Server"
+  children:
+      - server.jar
+      - start.bat
+```
+
+</div>
+</div>
+
+<div style="display:flex; gap:16px; width:98%;">
+
+  <div style="width:50%; " target="_blank" rel="noopener">
+
+[NeoForge](#forge-server) (with provided `.bat` file)
+
+```tree
+options:
+  showToolbar: false
+tree:
+- name: "NeoForge Server"
+  children:
+      - name: libraries
+        open: false
+        locked: true
+        type: folder
+      - run.sh
+      - run.bat
+      - user_jvm_args.txt
+
+```
+
+</div>
+  <a style="width:50%; " target="_blank" rel="noopener">
+
+</a>
+</div>
+
+::: info
+If you choose a Forge or NeoForge Server and are installing a server for a newer version, they already provide a perfect setup with a batch file pre installed. That means you can skip creating a batch file and renaming of any files.
+:::
+
+::: warning
+As previously talked about, if we use our own batch file for example for fabric servers or older Forge / NeoForge servers that don't already provide a batch file, we need to make sure that the file names match. That means you either need to rename the server file into `server.jar` or edit your own batch file so that at the end of the file the `server.jar` in the `-jar server.jar nogui` matches the name of your actual server file in the folder.
+:::
+
+### First Launch and EULA
+
+After double clicking the bat file your server will boot up and immediately crash 💀<br>
+But luckily that is completely normal since we first need to agree to the [Minecraft EULA](https://www.minecraft.net/eula).
+
+```tree
+options:
+  showToolbar: false
+tree:
+- name: "Modded Server"
+  children:
+      - ...
+      - eula.txt
+
+```
+
+Open the `eula.txt` file that was just created and edit the last line from `eula=false` to `eula=true`. After that save the file and reopen the `.bat` file again.
+
+### Starting the server
+
+Alright, that's pretty much it! After reopening the server and waiting for the world to generate you should see the following line in the console at some point:
