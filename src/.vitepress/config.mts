@@ -1,7 +1,6 @@
 import { defineConfig } from "vitepress";
-import UnoCSS from "unocss/vite";
-import { presetAttributify, presetIcons, presetUno, transformerDirectives } from "unocss";
 import { withFolderTree } from "vitepress-plugin-folder-tree";
+import { mark } from "@mdit/plugin-mark";
 
 // Theme related config
 import headConfig from "./config/headConfig";
@@ -46,6 +45,9 @@ export default withFolderTree(
         // image lazy loading is disabled by default
         lazyLoading: true,
       },
+      config(md) {
+        md.use(mark);
+      },
     },
 
     vite: {
@@ -54,21 +56,7 @@ export default withFolderTree(
           "@comp": path.resolve(__dirname, "../components"),
         },
       },
-      plugins: [
-        UnoCSS({
-          presets: [
-            presetUno(),
-            presetIcons({
-              extraProperties: {
-                display: "inline-block",
-                "vertical-align": "middle",
-              },
-            }),
-            presetAttributify(),
-          ],
-          transformers: [transformerDirectives()],
-        }),
-      ],
+      plugins: [],
     },
   }),
 );

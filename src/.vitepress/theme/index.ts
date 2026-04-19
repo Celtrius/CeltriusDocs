@@ -3,11 +3,11 @@ import { h } from "vue";
 import type { Theme } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import "./style.css";
-import "virtual:uno.css";
 import "vitepress-plugin-folder-tree/style.css";
 import ImageViewerP from "@miletorix/vitepress-image-viewer"; //[!code ++]
 import "@miletorix/vitepress-image-viewer/style.css"; //[!code ++]
 import type { EnhanceAppContext } from "vitepress";
+import LazyVideo from "@comp/LazyVideo.vue";
 
 export default {
   extends: DefaultTheme,
@@ -18,5 +18,6 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     ImageViewerP(app);
+    app.component("LazyVideo", LazyVideo);
   },
 } satisfies Theme;

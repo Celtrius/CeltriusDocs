@@ -133,8 +133,9 @@ html {
   scroll-behavior: smooth;
 }
 
-.highlight {
-  background-color: var(--vp-code-bg);
+mark {
+  background-color: color-mix(in srgb, var(--vp-code-bg) 92%, #3b82f6 8%);
   padding: 0.1em 0.25em;
   border-radius: 6px;
+  color: var(--vp-c-text-1);
 }
