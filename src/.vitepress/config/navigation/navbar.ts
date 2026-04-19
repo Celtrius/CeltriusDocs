@@ -7,14 +7,14 @@ const nav: DefaultTheme.NavItem[] = [
     link: "https://celtrius.net",
   },
   {
-    text: "📖 Docs",
-    link: "/docs/",
-    activeMatch: "/docs/",
+    text: "📖 Guides",
+    link: "/guides",
+    activeMatch: "/guides",
   },
   {
     text: "📹 Videos",
-    link: "/videos/",
-    activeMatch: "/videos/",
+    link: "/videos",
+    activeMatch: "/videos",
   },
 ];
 

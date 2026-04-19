@@ -2,12 +2,9 @@
 import type { DefaultTheme } from "vitepress";
 
 const sidebar: DefaultTheme.SidebarMulti = {
-  "/docs/": defaultSidebarEN(),
-  "/videos/": defaultSidebarEN(),
-  "/changelogs/": defaultSidebarEN(),
-  "/de/docs/": defaultSidebarDE(),
-  "/de/videos/": defaultSidebarDE(),
-  "/de/changelogs/": defaultSidebarDE(),
+  "/": defaultSidebarEN(),
+  /* German Sidebar Below */
+  "/de/*": defaultSidebarDE(),
 };
 
 function defaultSidebarEN(): DefaultTheme.SidebarItem[] {
@@ -16,22 +13,39 @@ function defaultSidebarEN(): DefaultTheme.SidebarItem[] {
       items: [
         {
           text: "📚 Getting Started",
-          link: "/docs/",
+          link: "/getting-started",
         },
-        { text: "🎥 Videos", link: "/videos/" },
-        { text: "📖 Guides", link: "/guides/" },
+        { text: "🎥 Videos", link: "/videos" },
+        { text: "📖 Guides", link: "/guides" },
       ],
     },
     {
-      text: "Video Guides",
+      text: "Minecraft Guides",
+      collapsed: false,
       items: [
         {
-          text: "🎮 Minecraft Server (2026)",
-          link: "/videos/minecraft-server/",
+          text: "🎉 Minecraft Server",
+          link: "/minecraft/server/",
+          collapsed: true,
           items: [
-            { text: "Portforwarding", link: "/videos/minecraft-server/portforwarding" },
-            { text: "Via Version", link: "/videos/minecraft-server/viaversion" },
+            {
+              text: "Detailed Guides",
+              collapsed: true,
+              items: [
+                { text: "🌟 Vanilla Server", link: "/minecraft/server/detailed-guide/vanilla" },
+                { text: "🌍 Plugin Server", link: "/minecraft/server/detailed-guide/plugins" },
+                { text: "🚀 Modded Server", link: "/minecraft/server/detailed-guide/modded" },
+              ],
+            },
+            { text: "Glossary", link: "/minecraft/server/glossary" },
+            { text: "Portforwarding", link: "/minecraft/server/portforwarding" },
           ],
+        },
+        {
+          text: "🚗 Minecraft Plugins",
+          link: "/guides/minecraft-server/",
+          collapsed: true,
+          items: [{ text: "ViaVersion", link: "/minecraft/plugins/viaversion" }],
         },
       ],
     },
